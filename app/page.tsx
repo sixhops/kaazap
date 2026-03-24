@@ -6,7 +6,7 @@ import {
   VIEW_GAME,
   VIEW_SPLASH,
   type ViewName,
-} from "@/constants";
+} from "@/app/constants/constants";
 import { CardSelectionScreen } from "@/app/components/card-selection-screen";
 import { GameScreen } from "@/app/components/game-screen";
 import { SplashScreen } from "@/app/components/splash-screen";

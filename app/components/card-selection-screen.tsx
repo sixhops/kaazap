@@ -5,7 +5,7 @@ import {
   VIEW_CARD_SELECTION,
   type ViewName,
   getNextView,
-} from "@/constants";
+} from "@/app/constants/constants";
 
 export interface CardSelectionScreenProps {
   setCurrentView: Dispatch<SetStateAction<ViewName>>;

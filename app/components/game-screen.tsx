@@ -5,7 +5,7 @@ import {
   VIEW_GAME,
   type ViewName,
   getNextView,
-} from "@/constants";
+} from "@/app/constants/constants";
 
 export interface GameScreenProps {
   setCurrentView: Dispatch<SetStateAction<ViewName>>;

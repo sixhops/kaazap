@@ -1,7 +1,11 @@
 "use client";
 
 import type { Dispatch, SetStateAction } from "react";
-import { VIEW_SPLASH, type ViewName, getNextView } from "@/app/constants/constants";
+import {
+  VIEW_SPLASH,
+  type ViewName,
+  getNextView,
+} from "@/app/constants/constants";
 
 export interface SplashScreenProps {
   setCurrentView: Dispatch<SetStateAction<ViewName>>;
@@ -14,7 +18,7 @@ export function SplashScreen({ setCurrentView }: SplashScreenProps) {
 
   return (
     <div
-      className="flex h-[640px] w-full max-w-[800px] flex-col rounded-lg border border-black/10 bg-red-200 p-6 shadow-sm"
+      className="flex h-[800px] w-full max-w-[1024px] flex-col rounded-lg border border-black/10 bg-red-200 p-6 shadow-sm"
       role="region"
       aria-labelledby="splash-screen-title"
     >

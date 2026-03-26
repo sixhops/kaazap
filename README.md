@@ -79,7 +79,7 @@ Refactor card-data.ts to change the "value" property to "values" and make it an 
   - added `selectedValue: number`
 - Refactored every `Card` object in all exported arrays (`HOUSE_CARDS`, `BLUE_CARDS`, `RED_CARDS`, `SWITCH_CARDS`) from:
   - `value: X`
-  to:
+    to:
   - `values: [X]`
   - `selectedValue: X`
 - Verified the refactor with linting/diagnostics and a project-wide search for remaining `value` property usages in TypeScript files.
@@ -111,3 +111,7 @@ Make a directory inside app named "constants", move the card-data.ts and constan
 
 - Grouping shared constants/data under `app/constants/` improves project structure and keeps related modules co-located.
 - Updating all import paths in one pass avoids broken module resolution and keeps references consistent for future development.
+
+### Human work
+
+Added components for CardRow and CardBox to display the cards in the CardSelectionScreen. I designed CardRow to be used in multiple places in the game so it is flexible in what cards it can display, how many it can display, and the actions that the click can perform. Clicking on the cards on the left adds a copy of that card to the side deck, Clicking on the cards in the side deck removes them from the side deck.

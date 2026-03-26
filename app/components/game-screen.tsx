@@ -18,7 +18,7 @@ export function GameScreen({ setCurrentView }: GameScreenProps) {
 
   return (
     <div
-      className="flex h-[640px] w-full max-w-[800px] flex-col rounded-lg border border-black/10 bg-green-200 p-6 shadow-sm"
+      className="flex h-[800px] w-full max-w-[1024px] flex-col rounded-lg border border-black/10 bg-green-200 p-6 shadow-sm"
       role="region"
       aria-labelledby="game-screen-title"
     >

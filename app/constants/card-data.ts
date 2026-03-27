@@ -7,11 +7,11 @@ export enum Color {
 }
 
 export const COLOR_STRINGS = {
-  [Color.COLOR_RED]: "redCard",
-  [Color.COLOR_BLUE]: "blueCard",
+  [Color.COLOR_RED]: "red",
+  [Color.COLOR_BLUE]: "blue",
   [Color.COLOR_SWITCH]: "switchCard",
-  [Color.COLOR_GREEN]: "greenCard",
-  [Color.COLOR_YELLOW]: "yellowCard",
+  [Color.COLOR_GREEN]: "green",
+  [Color.COLOR_YELLOW]: "yellow",
 } as const;
 
 export interface Card {

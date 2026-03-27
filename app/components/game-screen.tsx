@@ -6,9 +6,13 @@ import {
   type ViewName,
   getNextView,
 } from "@/app/constants/constants";
+import { Card } from "@/app/constants/card-data";
 
 export interface GameScreenProps {
   setCurrentView: Dispatch<SetStateAction<ViewName>>;
+  playerSideHand: Card[];
+  opponentSideHand: Card[];
+  houseDeck: Card[];
 }
 
 export function GameScreen({ setCurrentView }: GameScreenProps) {

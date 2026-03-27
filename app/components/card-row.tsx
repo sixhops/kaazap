@@ -22,7 +22,7 @@ export function CardRow({ size, cards, handleClick }: CardRowProps) {
 
   return (
     <div
-      className="flex flex-wrap content-start items-start gap-x-4 gap-y-4 w-auto h-auto rounded-lg border border-black/10 p-2 shadow-sm"
+      className="flex flex-wrap content-start items-start gap-x-4 gap-y-2 w-auto h-auto rounded-lg border border-black/10 p-1 shadow-sm"
       role="region"
       aria-labelledby="card-row"
       data-size={size}

@@ -11,12 +11,14 @@ export interface CardRowProps {
 }
 
 export function CardRow({ size, cards, handleClick }: CardRowProps) {
-  // Map cards to CardBox components
-  const cardBoxes = cards.map((card: Card, index: number) => (
+  const slots = Array.from({ length: size }, (_, i) => cards[i] ?? null); // TODO: Not sure if we want this logic.
+  const cardBoxes = slots.map((card, index) => (
     <CardBox
       key={index}
       displayCard={card}
-      clickEvent={() => handleClick(card, index)}
+      clickEvent={() => {
+        if (card !== null) handleClick(card, index);
+      }}
     />
   ));
 

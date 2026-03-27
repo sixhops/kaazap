@@ -5,6 +5,7 @@ import {
   VIEW_SPLASH,
   type ViewName,
   getNextView,
+  primaryButtonClassName,
 } from "@/app/constants/constants";
 
 export interface SplashScreenProps {
@@ -36,7 +37,7 @@ export function SplashScreen({ setCurrentView }: SplashScreenProps) {
         <button
           type="button"
           onClick={handleNext}
-          className="rounded-md bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900"
+          className={primaryButtonClassName}
         >
           Choose Your Cards
         </button>

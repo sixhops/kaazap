@@ -5,13 +5,24 @@ import { Card } from "@/app/constants/card-data";
 import { Color, COLOR_STRINGS } from "@/app/constants/card-data";
 
 export interface CardBoxProps {
-  displayCard: Card;
+  displayCard: Card | null;
   clickEvent: () => void;
 }
 
 export function CardBox({ displayCard, clickEvent }: CardBoxProps) {
   function handleClick() {
     clickEvent();
+  }
+
+  if (!displayCard) {
+    return (
+      <div
+        className="relative flex h-32 w-24 flex-col rounded-lg border-2 border-dashed border-black/20 bg-gray-200/80 p-3 pb-0 shadow-sm"
+        role="region"
+        aria-label="Empty card slot"
+        onClick={handleClick}
+      />
+    );
   }
 
   let backColor = ``;

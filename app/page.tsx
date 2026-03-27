@@ -22,8 +22,10 @@ export default function Home() {
 
   const [playerSideDeck, setPlayerSideDeck] = useState<Card[]>([]);
   const [playerSideHand, setPlayerSideHand] = useState<Card[]>([]);
+  const [playerBoardCards, setPlayerBoardCards] = useState<Card[]>([]);
   const [_opponentSideDeck, setOpponentSideDeck] = useState<Card[]>([]);
   const [opponentSideHand, setOpponentSideHand] = useState<Card[]>([]);
+  const [opponentBoardCards, setopponentBoardCards] = useState<Card[]>([]);
   const [houseDeck] = useState<Card[]>(shuffle(HOUSE_CARDS));
 
   const initializeOpponentSideDeckAndHand = () => {
@@ -67,6 +69,8 @@ export default function Home() {
           playerSideHand={playerSideHand}
           opponentSideHand={opponentSideHand}
           houseDeck={houseDeck}
+          playerBoardCards={playerBoardCards}
+          opponentBoardCards={opponentBoardCards}
         />
       )}
     </div>

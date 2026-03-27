@@ -8,6 +8,10 @@ import {
   VIEW_CARD_SELECTION,
   type ViewName,
   getNextView,
+  primaryButtonClassName,
+  primaryButtonCompactClassName,
+  primaryButtonDisabledClassName,
+  secondaryOutlineButtonClassName,
 } from "@/app/constants/constants";
 
 import {
@@ -127,14 +131,14 @@ export function CardSelectionScreen({
           type="button"
           disabled={playerSideDeck.length < 10}
           onClick={handlePlayClick}
-          className="rounded-md bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 disabled:cursor-not-allowed disabled:bg-zinc-400 disabled:text-zinc-200 disabled:opacity-70 disabled:hover:bg-zinc-400"
+          className={`${primaryButtonClassName} ${primaryButtonDisabledClassName}`}
         >
           Play
         </button>
         <button
           type="button"
           onClick={clearSideDeck}
-          className="rounded-md bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900"
+          className={primaryButtonClassName}
         >
           Clear
         </button>
@@ -166,14 +170,14 @@ export function CardSelectionScreen({
               <button
                 type="button"
                 onClick={handleNext}
-                className="rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900"
+                className={primaryButtonCompactClassName}
               >
                 OK
               </button>
               <button
                 type="button"
                 onClick={handleStartCancel}
-                className="rounded-md border border-zinc-300 bg-white px-4 py-2 text-sm font-medium text-zinc-900 transition-colors hover:bg-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-50 dark:hover:bg-zinc-700"
+                className={secondaryOutlineButtonClassName}
               >
                 Cancel
               </button>
